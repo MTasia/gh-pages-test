@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gh-pages-test.iml" filepath="$PROJECT_DIR$/.idea/gh-pages-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/todo-react-redux.iml" filepath="$PROJECT_DIR$/.idea/todo-react-redux.iml" />
     </modules>
   </component>
 </project>

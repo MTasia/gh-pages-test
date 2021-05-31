@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Todos.module.css";
-import Todo from "../Todo/Todo";
 import {connect} from "react-redux";
+import Todo from "../Todo/Todo";
+import style from "./Todos.module.css";
 
 const Todos = ({todos}) => {
     return (

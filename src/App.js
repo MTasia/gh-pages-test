@@ -1,11 +1,11 @@
 import React from "react";
+import {connect} from "react-redux";
+import {getClick} from "./redux/actions";
 import Header from "./components/Header/Header";
 import Todos from "./components/Todos/Todos";
 import InputTodo from "./components/InputTodo/InputTodo";
 import Filters from "./components/Filters/Filters";
 import Footer from "./components/Footer/Footer";
-import {connect} from "react-redux";
-import {getClick} from "./redux/actions";
 
 const App = ({getClick}) => {
 

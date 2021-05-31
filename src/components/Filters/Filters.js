@@ -1,8 +1,8 @@
 import React from "react";
-import style from './Filtres.module.css'
-import FiltersNav from "./FiltersNav";
 import {connect} from "react-redux";
+import FiltersNav from "./FiltersNav";
 import {clearCompleted} from "../../redux/actions";
+import style from './Filtres.module.css'
 
 const Filters = ({todos, itemsLeft, clearCompleted}) => {
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import style from './InputTodo.module.css'
 import {connect} from "react-redux";
 import {addTodo, checkAllTodos} from "../../redux/actions";
+import style from './InputTodo.module.css'
 
 const InputTodo = ({todos, addTodo, checkAllTodos}) => {
 

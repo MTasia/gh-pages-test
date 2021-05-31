@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
-import style from './Todo.module.css'
 import {connect} from "react-redux";
 import {checkTodo, deleteTodo, editTodo, filteredTodos} from "../../redux/actions";
+import style from './Todo.module.css'
 
 const Todo = ({todo, deleteTodo, checkTodo, editTodo, click, clickEvent, filteredTodos}) => {
 
