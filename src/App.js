@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {getClick} from "./redux/actions";
+import PropTypes from "prop-types";
 import Header from "./components/Header/Header";
 import Todos from "./components/Todos/Todos";
 import InputTodo from "./components/InputTodo/InputTodo";
@@ -20,6 +21,10 @@ const App = ({getClick}) => {
             </div>
         </div>
     );
+}
+
+App.propTypes = {
+    getClick: PropTypes.func
 }
 
 const mapDispatchToProps = {

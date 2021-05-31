@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import FiltersNav from "./FiltersNav";
 import {clearCompleted} from "../../redux/actions";
 import style from './Filtres.module.css'
@@ -20,6 +21,12 @@ const Filters = ({todos, itemsLeft, clearCompleted}) => {
             <div className={style.filtersAfter2}/>
         </div>
     )
+}
+
+Filters.propTypes = {
+    todos: PropTypes.array,
+    itemsLeft: PropTypes.number,
+    clearCompleted: PropTypes.func
 }
 
 const mapStateToProps = (state)  => {

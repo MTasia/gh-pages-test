@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import {changeFilter, filteredTodos} from "../../redux/actions";
 import style from "./Filtres.module.css";
 
@@ -46,6 +47,11 @@ const FiltersNav = ({filteredTodos, changeFilter}) => {
             </div>
         </nav>
     )
+}
+
+FiltersNav.propTypes = {
+    filteredTodos: PropTypes.func,
+    changeFilter: PropTypes.func
 }
 
 const mapDispatchToProps = {

@@ -1,10 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import {checkTodo, deleteTodo, editTodo, filteredTodos} from "../../redux/actions";
 import {ENTER_KEY_CODE, ESC_KEY_CODE} from "./keysConst";
 import style from './Todo.module.css'
 
 const Todo = ({todo, deleteTodo, checkTodo, editTodo, click, clickEvent, filteredTodos}) => {
+
+    console.log(clickEvent)
 
     const [editTodoTitle, setEditTodoTitle] = useState(todo.title)
 
@@ -76,12 +79,21 @@ const Todo = ({todo, deleteTodo, checkTodo, editTodo, click, clickEvent, filtere
     )
 }
 
+Todo.propTypes = {
+    todo: PropTypes.object,
+    deleteTodo: PropTypes.func,
+    checkTodo: PropTypes.func,
+    editTodo: PropTypes.func,
+    click: PropTypes.bool,
+    clickEvent: PropTypes.any,
+    filteredTodos: PropTypes.func
+}
+
 const mapStateToProps = (state) => {
     return {
         click: state.click,
         clickEvent: state.clickEvent
     }
-
 }
 
 const mapDispatchToProps = {

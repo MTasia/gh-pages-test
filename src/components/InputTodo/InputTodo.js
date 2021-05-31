@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {connect} from "react-redux";
 import {addTodo, checkAllTodos} from "../../redux/actions";
 import style from './InputTodo.module.css'
+import PropTypes from "prop-types";
 
 const InputTodo = ({todos, addTodo, checkAllTodos}) => {
 
@@ -42,6 +43,12 @@ const InputTodo = ({todos, addTodo, checkAllTodos}) => {
             />
         </form>
     )
+}
+
+InputTodo.propTypes = {
+    todos: PropTypes.array,
+    addTodo: PropTypes.func,
+    checkAllTodos: PropTypes.func
 }
 
 const mapStateToProps = (state) => {
