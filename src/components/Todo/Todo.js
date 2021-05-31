@@ -1,15 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {connect} from "react-redux";
 import {checkTodo, deleteTodo, editTodo, filteredTodos} from "../../redux/actions";
+import {ENTER_KEY_CODE, ESC_KEY_CODE} from "./keysConst";
 import style from './Todo.module.css'
 
 const Todo = ({todo, deleteTodo, checkTodo, editTodo, click, clickEvent, filteredTodos}) => {
 
     const [editTodoTitle, setEditTodoTitle] = useState(todo.title)
-    const keys = {
-        enter: 13,
-        esc: 27
-    }
 
     const checkTodoHandler = () => {
         checkTodo(todo.id);
@@ -26,7 +23,7 @@ const Todo = ({todo, deleteTodo, checkTodo, editTodo, click, clickEvent, filtere
     }
 
     const keyDownHandler = (event) => {
-        if (event.keyCode === keys.enter || event.keyCode === keys.esc) {
+        if (event.keyCode === ENTER_KEY_CODE || event.keyCode === ESC_KEY_CODE) {
             event.preventDefault();
             todo.edited = false;
             todo.title = editTodoTitle;
