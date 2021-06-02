@@ -15,7 +15,7 @@ Todos.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-        todos: state.todos
+        todos: state.todosReducer.todos
     })
 
 export default connect(mapStateToProps, null) (Todos)

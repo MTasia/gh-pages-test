@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {addTodo, checkAllTodos} from "../../redux/actions";
+import {addTodo, checkAllTodos} from "../../redux/todosReducer/actions";
 import style from './InputTodo.module.css'
 
 const InputTodo = ({todos, addTodoInput, checkAllTodosInput}) => {
@@ -52,7 +52,7 @@ InputTodo.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-        todos: state.todos
+        todos: state.todosReducer.todos
     })
 
 const mapDispatchToProps = {

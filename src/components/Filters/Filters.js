@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import FiltersNav from "./FiltersNav";
-import {clearCompleted} from "../../redux/actions";
+import {clearCompleted} from "../../redux/todosReducer/actions";
 import style from './Filtres.module.css'
 
 const Filters = ({todos, itemsLeft, clearCompletedFilters}) => (
@@ -27,8 +27,8 @@ Filters.propTypes = {
 }
 
 const mapStateToProps = (state)  => ({
-        todos: state.todos,
-        itemsLeft: state.itemsLeft
+        todos: state.todosReducer.todos,
+        itemsLeft: state.todosReducer.itemsLeft
     })
 
 const mapDispatchToProps = {

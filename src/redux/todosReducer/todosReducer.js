@@ -1,24 +1,16 @@
 import {
     ADD_TODO, CHANGE_FILTER,
-    CHECK_ALL_TODOS,
-    CHECK_TODO,
-    CLEAR_COMPLETED,
-    DELETE_TODO, EDIT_TITLE,
-    EDIT_TODO,
-    FILTERED_TODOS,
+    CHECK_ALL_TODOS, CHECK_TODO,
+    CLEAR_COMPLETED, DELETE_TODO, EDIT_TITLE, EDIT_TODO, FILTERED_TODOS,
     GET_CLICK
 } from "./types";
 
-const filters = {
-    all: 'all',
-    active: 'active',
-    completed: 'completed'
-}
+import {FILTER_ACTIVE, FILTER_ALL, FILTER_COMPLETED} from "./filtersConst";
 
 const initState = {
     todos: [],
     itemsLeft: 0,
-    currentFilter: filters.all,
+    currentFilter: FILTER_ALL,
     click: false,
     clickEvent: null,
     editTodoTitle: ''
@@ -60,6 +52,27 @@ export const todosReducer = (state = initState, action) => {
                 itemsLeft: newItemsLeft
             }
 
+        case EDIT_TITLE:
+            return {
+                ...state,
+                editTodoTitle: action.payload
+            }
+
+        case EDIT_TODO:
+            if (!action.payload.edited) {
+                const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: true} : {...todo});
+                return {
+                    ...state,
+                    todos: newListWithEditedTodo
+                }
+            }
+
+            const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: false, title: state.editTodoTitle} : {...todo});
+            return {
+                ...state,
+                todos: newListWithEditedTodo
+            }
+
         case CLEAR_COMPLETED:
             const newListWithoutCompleted = state.todos.filter(todo => !todo.completed);
             return {
@@ -67,6 +80,30 @@ export const todosReducer = (state = initState, action) => {
                 todos: newListWithoutCompleted,
                 itemsLeft: newListWithoutCompleted.length
             }
+
+        case FILTERED_TODOS:
+            if (state.currentFilter === FILTER_ALL) {
+                const newFilteredList = state.todos.map(todo => ({...todo, visibility: true}))
+                return {
+                    ...state,
+                    todos: newFilteredList
+                }
+            }
+            if (state.currentFilter === FILTER_ACTIVE) {
+                const newFilteredList = state.todos.map(todo => todo.completed ? ({...todo, visibility: false}) : ({...todo, visibility: true}))
+                return {
+                    ...state,
+                    todos: newFilteredList
+                }
+            }
+            if (state.currentFilter === FILTER_COMPLETED) {
+                const newFilteredList = state.todos.map(todo => todo.completed ? ({...todo, visibility: true}): ({...todo, visibility: false}))
+                return {
+                    ...state,
+                    todos: newFilteredList
+                }
+            }
+            return state
 
         case CHECK_ALL_TODOS:
             const isFirstTodoCompleted = state.todos[0].completed
@@ -92,51 +129,7 @@ export const todosReducer = (state = initState, action) => {
                 currentFilter: action.payload
             }
 
-        case FILTERED_TODOS:
-            if (state.currentFilter === filters.all) {
-                const newFilteredList = state.todos.map(todo => ({...todo, visibility: true}))
-                return {
-                    ...state,
-                    todos: newFilteredList
-                }
-            }
-            if (state.currentFilter === filters.active) {
-                const newFilteredList = state.todos.map(todo => todo.completed ? ({...todo, visibility: false}) : ({...todo, visibility: true}))
-                return {
-                    ...state,
-                    todos: newFilteredList
-                }
-            }
-            if (state.currentFilter === filters.completed) {
-                const newFilteredList = state.todos.map(todo => todo.completed ? ({...todo, visibility: true}): ({...todo, visibility: false}))
-                return {
-                    ...state,
-                    todos: newFilteredList
-                }
-            }
-            return state
 
-        case EDIT_TITLE:
-            return {
-                ...state,
-                editTodoTitle: action.payload
-            }
-
-        case EDIT_TODO:
-            if (!action.payload.edited) {
-                const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: true} : {...todo});
-                return {
-                    ...state,
-                    todos: newListWithEditedTodo
-                }
-            }
-            
-                const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: false, title: state.editTodoTitle} : {...todo});
-                return {
-                    ...state,
-                    todos: newListWithEditedTodo
-                }
-            
 
         case GET_CLICK:
             return {

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {changeFilter, filteredTodos} from "../../redux/actions";
+import {changeFilter, filteredTodos} from "../../redux/todosReducer/actions";
 import style from "./Filtres.module.css";
 
 const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
