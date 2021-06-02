@@ -5,39 +5,34 @@ import FiltersNav from "./FiltersNav";
 import {clearCompleted} from "../../redux/actions";
 import style from './Filtres.module.css'
 
-const Filters = ({todos, itemsLeft, clearCompleted}) => {
-
-    return (
+const Filters = ({todos, itemsLeft, clearCompletedFilters}) => (
         <div className={todos.length === 0 ? style.hidden : style.none}>
             <div className={style.filtersWrapper}>
                 <div className={style.itemLeft}>{itemsLeft} items left</div>
                 <FiltersNav />
                 <div
                     className={style.clearCompleted}
-                    onClick={() => clearCompleted()}
+                    onClick={() => clearCompletedFilters()}
                 >Clear completed</div>
             </div>
             <div className={style.filtersAfter1}/>
             <div className={style.filtersAfter2}/>
         </div>
     )
-}
 
 Filters.propTypes = {
-    todos: PropTypes.array,
+    todos: PropTypes.arrayOf(PropTypes.object),
     itemsLeft: PropTypes.number,
-    clearCompleted: PropTypes.func
+    clearCompletedFilters: PropTypes.func
 }
 
-const mapStateToProps = (state)  => {
-    return {
+const mapStateToProps = (state)  => ({
         todos: state.todos,
         itemsLeft: state.itemsLeft
-    }
-}
+    })
 
 const mapDispatchToProps = {
-    clearCompleted
+    clearCompletedFilters: () => clearCompleted()
 }
 
 export default connect(mapStateToProps, mapDispatchToProps) (Filters)

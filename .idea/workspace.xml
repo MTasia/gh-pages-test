@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Filters/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filters/Filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filters/FiltersNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/InputTodo/InputTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputTodo/InputTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

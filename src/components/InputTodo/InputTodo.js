@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import {addTodo, checkAllTodos} from "../../redux/actions";
 import style from './InputTodo.module.css'
-import PropTypes from "prop-types";
 
-const InputTodo = ({todos, addTodo, checkAllTodos}) => {
+const InputTodo = ({todos, addTodoInput, checkAllTodosInput}) => {
 
     const [userInput, setUserInput] = useState('')
 
@@ -23,7 +23,7 @@ const InputTodo = ({todos, addTodo, checkAllTodos}) => {
                 edited: false,
                 visibility: true
             }
-            addTodo(newTodo);
+            addTodoInput(newTodo);
             setUserInput('')
         }
     }
@@ -32,7 +32,7 @@ const InputTodo = ({todos, addTodo, checkAllTodos}) => {
         <form onSubmit={submitHandler}>
             <label
                 className={todos.length > 0 ? style.label : style.hidden}
-                onClick={() => checkAllTodos()}
+                onClick={() => checkAllTodosInput()}
             >❯</label>
             <input
                 type="text"
@@ -46,20 +46,18 @@ const InputTodo = ({todos, addTodo, checkAllTodos}) => {
 }
 
 InputTodo.propTypes = {
-    todos: PropTypes.array,
-    addTodo: PropTypes.func,
-    checkAllTodos: PropTypes.func
+    todos: PropTypes.arrayOf(PropTypes.object),
+    addTodoInput: PropTypes.func,
+    checkAllTodosInput: PropTypes.func
 }
 
-const mapStateToProps = (state) => {
-    return {
+const mapStateToProps = (state) => ({
         todos: state.todos
-    }
-}
+    })
 
 const mapDispatchToProps = {
-    addTodo: todo => addTodo(todo),
-    checkAllTodos: () => checkAllTodos()
+    addTodoInput: todo => addTodo(todo),
+    checkAllTodosInput: () => checkAllTodos()
 };
 
 export default connect(mapStateToProps, mapDispatchToProps) (InputTodo)

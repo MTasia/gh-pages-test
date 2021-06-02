@@ -1,17 +1,15 @@
 import React from "react";
 import {connect} from "react-redux";
-import {getClick} from "./redux/actions";
 import PropTypes from "prop-types";
+import {getClick} from "./redux/actions";
 import Header from "./components/Header/Header";
 import Todos from "./components/Todos/Todos";
 import InputTodo from "./components/InputTodo/InputTodo";
 import Filters from "./components/Filters/Filters";
 import Footer from "./components/Footer/Footer";
 
-const App = ({getClick}) => {
-
-    return (
-        <div className='body' onClick={(event) => getClick(event)}>
+const App = ({getClickApp}) => (
+        <div className='body' onClick={(event) => getClickApp(event)}>
             <div className='wrapper'>
                 <Header/>
                 <InputTodo/>
@@ -20,15 +18,14 @@ const App = ({getClick}) => {
                 <Footer/>
             </div>
         </div>
-    );
-}
+    )
 
 App.propTypes = {
-    getClick: PropTypes.func
+    getClickApp: PropTypes.func
 }
 
 const mapDispatchToProps = {
-    getClick: event => getClick(event)
+    getClickApp: event => getClick(event)
 }
 
 export default connect(null, mapDispatchToProps) (App)
