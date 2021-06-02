@@ -59,15 +59,16 @@ export const todosReducer = (state = initState, action) => {
             }
 
         case EDIT_TODO:
-            if (!action.payload.edited) {
-                const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: true} : {...todo});
+            const {id, edited} = action.payload
+            if (!edited) {
+                const newListWithEditedTodo = state.todos.map((todo) => todo.id === id ? {...todo, edited: true} : {...todo});
                 return {
                     ...state,
                     todos: newListWithEditedTodo
                 }
             }
 
-            const newListWithEditedTodo = state.todos.map((todo) => todo.id === action.payload.id ? {...todo, edited: false, title: state.editTodoTitle} : {...todo});
+            const newListWithEditedTodo = state.todos.map((todo) => todo.id === id ? {...todo, edited: false, title: state.editTodoTitle} : {...todo});
             return {
                 ...state,
                 todos: newListWithEditedTodo
