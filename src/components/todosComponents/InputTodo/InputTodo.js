@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {addTodo, checkAllTodos} from "../../redux/todosReducer/actions";
+import {addTodo, checkAllTodos} from "../../../redux/todosReducer/actions";
 import style from './InputTodo.module.css'
+import {makeGetVisibleTodos} from "../../../redux/selectors/todosSelector";
 
 const InputTodo = ({todos, addTodoInput, checkAllTodosInput}) => {
 
@@ -51,13 +52,17 @@ InputTodo.propTypes = {
     checkAllTodosInput: PropTypes.func
 }
 
-const mapStateToProps = (state) => ({
-        todos: state.todosReducer.todos
+const makeMapStateToProps = () => {
+    const getVisibleTodos = makeGetVisibleTodos()
+    const mapStateToProps = (state) => ({
+        todos: getVisibleTodos(state)
     })
+    return mapStateToProps
+}
 
 const mapDispatchToProps = {
     addTodoInput: todo => addTodo(todo),
     checkAllTodosInput: checkAllTodos
 };
 
-export default connect(mapStateToProps, mapDispatchToProps) (InputTodo)
+export default connect(makeMapStateToProps, mapDispatchToProps) (InputTodo)

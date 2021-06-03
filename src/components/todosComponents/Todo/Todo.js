@@ -1,17 +1,17 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {checkTodo, deleteTodo, editTitle, editTodo, filteredTodos} from "../../redux/todosReducer/actions";
+import {checkTodo, deleteTodo, editTitle, editTodo} from "../../../redux/todosReducer/actions";
 import {ENTER_KEY_CODE, ESC_KEY_CODE} from "./keysConst";
 import style from './Todo.module.css'
+import {makeGetClick, makeGetClickEvent} from "../../../redux/selectors/todosSelector";
 
-const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo, click, clickEvent, filteredTodosTodo}) => {
+const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo, click, clickEvent}) => {
 
     const [editTodoTitle, setEditTodoTitle] = useState(todo.title)
 
     const checkTodoHandler = () => {
         checkTodoTodo(todo.id);
-        filteredTodosTodo();
     }
 
     const editTodoHandler = () => {
@@ -85,13 +85,12 @@ Todo.propTypes = {
     editTitleTodo: PropTypes.func,
     editTodoTodo: PropTypes.func,
     click: PropTypes.bool,
-    clickEvent: PropTypes.objectOf(PropTypes.any),
-    filteredTodosTodo: PropTypes.func
+    clickEvent: PropTypes.objectOf(PropTypes.any)
 }
 
 const mapStateToProps = (state) => ({
-        click: state.todosReducer.click,
-        clickEvent: state.todosReducer.clickEvent
+        click: makeGetClick(state),
+        clickEvent: makeGetClickEvent(state)
     })
 
 const mapDispatchToProps = {
@@ -99,7 +98,6 @@ const mapDispatchToProps = {
     checkTodoTodo: id => checkTodo(id),
     editTitleTodo: newTitle => editTitle(newTitle),
     editTodoTodo: id => editTodo(id),
-    filteredTodosTodo: filteredTodos
 }
 
 export default connect(mapStateToProps, mapDispatchToProps) (Todo)

@@ -2,8 +2,9 @@ import React from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import FiltersNav from "./FiltersNav";
-import {clearCompleted} from "../../redux/todosReducer/actions";
+import {clearCompleted} from "../../../redux/todosReducer/actions";
 import style from './Filtres.module.css'
+import {makeGetItemsLeft, makeGetVisibleTodos} from "../../../redux/selectors/todosSelector";
 
 const Filters = ({todos, itemsLeft, clearCompletedFilters}) => (
         <div className={todos.length === 0 ? style.hidden : style.none}>
@@ -26,13 +27,18 @@ Filters.propTypes = {
     clearCompletedFilters: PropTypes.func
 }
 
-const mapStateToProps = (state)  => ({
-        todos: state.todosReducer.todos,
-        itemsLeft: state.todosReducer.itemsLeft
+const makeMapStateToProps = () => {
+    const getVisibleTodos = makeGetVisibleTodos()
+    const getItemsLeft = makeGetItemsLeft()
+    const mapStateToProps = (state) => ({
+        todos: getVisibleTodos(state),
+        itemsLeft: getItemsLeft(state)
     })
+    return mapStateToProps
+}
 
 const mapDispatchToProps = {
     clearCompletedFilters: clearCompleted
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Filters)
+export default connect(makeMapStateToProps, mapDispatchToProps) (Filters)

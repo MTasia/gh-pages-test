@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {changeFilter, filteredTodos} from "../../redux/todosReducer/actions";
+import {changeFilter} from "../../../redux/todosReducer/actions";
 import style from "./Filtres.module.css";
 
-const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
+const FiltersNav = ({changeFilterNav}) => {
 
     const [allSelected, setAllSelected] = useState(true)
     const [activeSelected, setActiveSelected] = useState(false)
@@ -15,7 +15,6 @@ const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
         setActiveSelected(false);
         setCompletedSelected(false);
         changeFilterNav('all');
-        filteredTodosNav();
     }
 
     const setActiveHandler = () => {
@@ -23,7 +22,6 @@ const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
         setActiveSelected(true);
         setCompletedSelected(false);
         changeFilterNav('active');
-        filteredTodosNav();
     }
 
     const setCompletedHandler = () => {
@@ -31,7 +29,6 @@ const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
         setActiveSelected(false);
         setCompletedSelected(true);
         changeFilterNav('completed');
-        filteredTodosNav();
     }
 
     return (
@@ -50,12 +47,10 @@ const FiltersNav = ({filteredTodosNav, changeFilterNav}) => {
 }
 
 FiltersNav.propTypes = {
-    filteredTodosNav: PropTypes.func,
     changeFilterNav: PropTypes.func
 }
 
 const mapDispatchToProps = {
-    filteredTodosNav: filteredTodos,
     changeFilterNav: filter => changeFilter(filter)
 }
 

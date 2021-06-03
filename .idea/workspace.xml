@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todosComponents/Todos/Todos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filters/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filters/Filtres.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filtres.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputTodo/InputTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputTodo/InputTodo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/keysConst.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/keysConst.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todos/Todos.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +49,17 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/redux/localStorage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/todosComponents/Todos/Todos.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/redux/store.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1sc6t62Y62YH3bpRMHFKuO67Bhb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,6 +82,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\snp\todo-react-redux\src\redux" />
+      <recent name="D:\Documents\snp\todo-react-redux\src\components\todosComponents" />
       <recent name="D:\Documents\snp\todo-react-redux\src\redux\todosReducers" />
       <recent name="D:\Documents\snp\todo-react-redux\src\redux\Reducers" />
     </key>
@@ -67,7 +99,7 @@
       <workItem from="1621159747714" duration="20000" />
       <workItem from="1622479038681" duration="1310000" />
       <workItem from="1622481158507" duration="2650000" />
-      <workItem from="1622702240271" duration="6321000" />
+      <workItem from="1622702240271" duration="18741000" />
     </task>
     <servers />
   </component>

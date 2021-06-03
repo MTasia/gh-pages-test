@@ -5,7 +5,6 @@ import {
     EDIT_TODO,
     CHECK_ALL_TODOS,
     CLEAR_COMPLETED,
-    FILTERED_TODOS,
     GET_CLICK,
     CHANGE_FILTER, EDIT_TITLE
 
@@ -47,10 +46,6 @@ export const clearCompleted = () => ({
 export const changeFilter = (filter) => ({
         type: CHANGE_FILTER,
         payload: filter
-    })
-
-export const filteredTodos = () => ({
-        type: FILTERED_TODOS
     })
 
 export const getClick = (event) => ({
