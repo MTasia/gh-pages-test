@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/gh-pages-test/static/css/main.b651c9c2.chunk.css",
-    "main.js": "/gh-pages-test/static/js/main.94036348.chunk.js",
-    "main.js.map": "/gh-pages-test/static/js/main.94036348.chunk.js.map",
+    "main.js": "/gh-pages-test/static/js/main.e8206106.chunk.js",
+    "main.js.map": "/gh-pages-test/static/js/main.e8206106.chunk.js.map",
     "runtime-main.js": "/gh-pages-test/static/js/runtime-main.f65aba9a.js",
     "runtime-main.js.map": "/gh-pages-test/static/js/runtime-main.f65aba9a.js.map",
-    "static/js/2.a0bf1507.chunk.js": "/gh-pages-test/static/js/2.a0bf1507.chunk.js",
-    "static/js/2.a0bf1507.chunk.js.map": "/gh-pages-test/static/js/2.a0bf1507.chunk.js.map",
+    "static/js/2.295bdfe9.chunk.js": "/gh-pages-test/static/js/2.295bdfe9.chunk.js",
+    "static/js/2.295bdfe9.chunk.js.map": "/gh-pages-test/static/js/2.295bdfe9.chunk.js.map",
     "index.html": "/gh-pages-test/index.html",
     "static/css/main.b651c9c2.chunk.css.map": "/gh-pages-test/static/css/main.b651c9c2.chunk.css.map",
-    "static/js/2.a0bf1507.chunk.js.LICENSE.txt": "/gh-pages-test/static/js/2.a0bf1507.chunk.js.LICENSE.txt"
+    "static/js/2.295bdfe9.chunk.js.LICENSE.txt": "/gh-pages-test/static/js/2.295bdfe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f65aba9a.js",
-    "static/js/2.a0bf1507.chunk.js",
+    "static/js/2.295bdfe9.chunk.js",
     "static/css/main.b651c9c2.chunk.css",
-    "static/js/main.94036348.chunk.js"
+    "static/js/main.e8206106.chunk.js"
   ]
 }
