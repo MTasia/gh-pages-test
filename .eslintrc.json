@@ -30,7 +30,6 @@
         "no-underscore-dangle": "off",
         "no-case-declarations": "off",
         "no-return-assign": "off",
-        "no-nested-ternary": "off",
         "no-empty": "off",
         "no-bitwise": "off"
     }

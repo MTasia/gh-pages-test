@@ -42,10 +42,17 @@ export const todosReducer = (state = defaultState, action) => {
 
         case CHECK_TODO:
             let newItemsLeft = state.itemsLeft;
-            const newListWithCheckTodo = state.todos.map((todo) => todo.id === action.payload ?
-                ((todo.completed ? newItemsLeft += 1 : newItemsLeft -= 1), {...todo, completed: !todo.completed}) :
-                {...todo});
-
+            const newListWithCheckTodo = state.todos.map((todo) => {
+                if (todo.id === action.payload && todo.completed) {
+                    newItemsLeft += 1
+                    return {...todo, completed: !todo.completed}
+                }
+                if (todo.id === action.payload && !todo.completed) {
+                    newItemsLeft -= 1
+                    return {...todo, completed: !todo.completed}
+                }
+                return {...todo}
+            })
             return {
                 ...state,
                 todos: newListWithCheckTodo,

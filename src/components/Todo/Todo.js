@@ -48,7 +48,7 @@ const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo,
     return (
         <li className={todo.visibility ? style.item: style.hidden}>
             <div
-                className={todo.edited ? (style.hidden) : (todo.completed ? style.checkButtonCompleted : style.checkButtonActive)}
+                className={todo.edited ? (style.hidden) : (style.checkButtonActive)}
                 onClick={checkTodoHandler}
             />
 
