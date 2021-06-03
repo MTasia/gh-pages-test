@@ -55,7 +55,7 @@ FiltersNav.propTypes = {
 }
 
 const mapDispatchToProps = {
-    filteredTodosNav: () => filteredTodos(),
+    filteredTodosNav: filteredTodos,
     changeFilterNav: filter => changeFilter(filter)
 }
 

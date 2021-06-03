@@ -12,7 +12,7 @@ const Filters = ({todos, itemsLeft, clearCompletedFilters}) => (
                 <FiltersNav />
                 <div
                     className={style.clearCompleted}
-                    onClick={() => clearCompletedFilters()}
+                    onClick={clearCompletedFilters}
                 >Clear completed</div>
             </div>
             <div className={style.filtersAfter1}/>
@@ -32,7 +32,7 @@ const mapStateToProps = (state)  => ({
     })
 
 const mapDispatchToProps = {
-    clearCompletedFilters: () => clearCompleted()
+    clearCompletedFilters: clearCompleted
 }
 
 export default connect(mapStateToProps, mapDispatchToProps) (Filters)

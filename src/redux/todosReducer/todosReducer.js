@@ -7,7 +7,7 @@ import {
 
 import {FILTER_ACTIVE, FILTER_ALL, FILTER_COMPLETED} from "./filtersConst";
 
-const initState = {
+const defaultState = {
     todos: [],
     itemsLeft: 0,
     currentFilter: FILTER_ALL,
@@ -16,7 +16,7 @@ const initState = {
     editTodoTitle: ''
 }
 
-export const todosReducer = (state = initState, action) => {
+export const todosReducer = (state = defaultState, action) => {
 
     switch (action.type) {
         case ADD_TODO:

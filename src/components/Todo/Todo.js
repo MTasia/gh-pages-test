@@ -48,7 +48,7 @@ const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo,
     return (
         <li className={todo.visibility ? style.item: style.hidden}>
             <div
-                className={todo.edited? (style.hidden) : (todo.completed ? style.checkButtonCompleted : style.checkButtonActive)}
+                className={todo.edited ? (style.hidden) : (todo.completed ? style.checkButtonCompleted : style.checkButtonActive)}
                 onClick={checkTodoHandler}
             />
 
@@ -63,7 +63,10 @@ const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo,
                         ref={inputRef}
                     />
                 </form>) :
-                (<div className={todo.completed ? style.titleCompleted : style.titleActive} onDoubleClick={editTodoHandler}>{todo.title}</div>)}
+                (<div
+                    className={todo.completed ? style.titleCompleted : style.titleActive}
+                    onDoubleClick={editTodoHandler}>{todo.title}
+                </div>)}
 
 
             <button
@@ -96,7 +99,7 @@ const mapDispatchToProps = {
     checkTodoTodo: id => checkTodo(id),
     editTitleTodo: newTitle => editTitle(newTitle),
     editTodoTodo: id => editTodo(id),
-    filteredTodosTodo: () => filteredTodos()
+    filteredTodosTodo: filteredTodos
 }
 
 export default connect(mapStateToProps, mapDispatchToProps) (Todo)

@@ -32,7 +32,7 @@ const InputTodo = ({todos, addTodoInput, checkAllTodosInput}) => {
         <form onSubmit={submitHandler}>
             <label
                 className={todos.length > 0 ? style.label : style.hidden}
-                onClick={() => checkAllTodosInput()}
+                onClick={checkAllTodosInput}
             >❯</label>
             <input
                 type="text"
@@ -57,7 +57,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
     addTodoInput: todo => addTodo(todo),
-    checkAllTodosInput: () => checkAllTodos()
+    checkAllTodosInput: checkAllTodos
 };
 
 export default connect(mapStateToProps, mapDispatchToProps) (InputTodo)
