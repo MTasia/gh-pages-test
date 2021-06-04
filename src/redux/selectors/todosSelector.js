@@ -1,5 +1,5 @@
 import {createSelector} from "reselect";
-import {FILTER_ACTIVE, FILTER_ALL, FILTER_COMPLETED} from "../todosReducer/filtersConst";
+import {FILTER_ACTIVE, FILTER_ALL, FILTER_COMPLETED} from "../reducer/todosReducer/filtersConst";
 
 const getTodos = (state) => state.todosReducer.todos
 

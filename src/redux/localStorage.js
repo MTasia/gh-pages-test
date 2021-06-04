@@ -6,7 +6,7 @@ export const loadState = () => {
     return JSON.parse(serializedState);
 }
 
-// export const saveState = (state) => {
-//     const serializedState = JSON.stringify(state.todosReducer);
-//     localStorage.setItem('state', serializedState);
-// }
+export const saveState = (state) => {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem('state', serializedState);
+}
