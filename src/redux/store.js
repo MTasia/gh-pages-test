@@ -1,17 +1,11 @@
-import {combineReducers, compose, createStore} from "redux";
-import {todosReducer} from "./todosReducer/todosReducer";
-import {loadState} from "./localStorage";
+import { configureStore } from '@reduxjs/toolkit'
+import todosReducer from "./todosReducer/todosSlicer";
 
-const rootReducer = combineReducers({
-    todosReducer
+export const store = configureStore({
+    reducer: {
+        todosReducer
+    }
 })
 
-const persistedState = loadState()
-
-export const store = createStore(
-    rootReducer,
-    persistedState,
-    compose(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-)
 
 

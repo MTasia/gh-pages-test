@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {checkTodo, deleteTodo, editTitle, editTodo} from "../../../redux/todosReducer/actions";
+import {checkTodo, deleteTodo, editTitle, editTodo} from "../../../redux/todosReducer/todosSlicer";
 import {ENTER_KEY_CODE, ESC_KEY_CODE} from "./keysConst";
 import style from './Todo.module.css'
 import {makeGetClick, makeGetClickEvent} from "../../../redux/selectors/todosSelector";

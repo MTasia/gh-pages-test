@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {addTodo, checkAllTodos} from "../../../redux/todosReducer/actions";
+import {addTodo, checkAllTodos} from "../../../redux/todosReducer/todosSlicer";
 import style from './InputTodo.module.css'
 import {makeGetVisibleTodos} from "../../../redux/selectors/todosSelector";
 

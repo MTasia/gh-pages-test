@@ -1,10 +1,4 @@
-import {
-    ADD_TODO, CHANGE_FILTER,
-    CHECK_ALL_TODOS, CHECK_TODO,
-    CLEAR_COMPLETED, DELETE_TODO, EDIT_TITLE, EDIT_TODO,
-    GET_CLICK
-} from "./types";
-
+import {createSlice} from "@reduxjs/toolkit";
 import {FILTER_ALL} from "./filtersConst";
 
 const defaultState = {
@@ -15,23 +9,24 @@ const defaultState = {
     editTodoTitle: ''
 }
 
-export const todosReducer = (state = defaultState, action) => {
-
-    switch (action.type) {
-        case ADD_TODO:
+export const todosSlicer = createSlice({
+    name: 'todos',
+    initialState: defaultState,
+    reducers: {
+        addTodo(state, action) {
             return {
                 ...state,
                 todos: state.todos.concat(action.payload)
             }
-
-        case DELETE_TODO:
+        },
+        deleteTodo(state, action) {
             const newListWithDeletedTodo = state.todos.filter((todo) => todo.id !== action.payload);
             return {
                 ...state,
                 todos: newListWithDeletedTodo
             }
-
-        case CHECK_TODO:
+        },
+        checkTodo(state, action) {
             const newListWithCheckTodo = state.todos.map((todo) => {
                 if (todo.id === action.payload && todo.completed) {
                     return {...todo, completed: !todo.completed}
@@ -45,14 +40,21 @@ export const todosReducer = (state = defaultState, action) => {
                 ...state,
                 todos: newListWithCheckTodo
             }
-
-        case EDIT_TITLE:
+        },
+        clearCompleted(state){
+            const newListWithoutCompleted = state.todos.filter(todo => !todo.completed);
+            return {
+                ...state,
+                todos: newListWithoutCompleted
+            }
+        },
+        editTitle(state, action) {
             return {
                 ...state,
                 editTodoTitle: action.payload
             }
-
-        case EDIT_TODO:
+        },
+        editTodo(state, action) {
             const {id, edited} = action.payload
             if (!edited) {
                 const newListWithEditedTodo = state.todos.map((todo) => todo.id === id ? {
@@ -74,15 +76,8 @@ export const todosReducer = (state = defaultState, action) => {
                 ...state,
                 todos: newListWithEditedTodo
             }
-
-        case CLEAR_COMPLETED:
-            const newListWithoutCompleted = state.todos.filter(todo => !todo.completed);
-            return {
-                ...state,
-                todos: newListWithoutCompleted
-            }
-
-        case CHECK_ALL_TODOS:
+        },
+        checkAllTodos(state) {
             const isFirstTodoCompleted = state.todos[0].completed
             if (isFirstTodoCompleted) {
                 const newListCheckAllTodos = state.todos.map(todo => ({...todo, completed: false}))
@@ -96,22 +91,25 @@ export const todosReducer = (state = defaultState, action) => {
                 ...state,
                 todos: newListCheckAllTodos
             }
-
-
-        case CHANGE_FILTER:
+        },
+        changeFilter(state, action) {
             return {
                 ...state,
                 currentFilter: action.payload
             }
-
-        case GET_CLICK:
+        },
+        getClick(state, action) {
             return {
                 ...state,
                 click: true,
                 clickEvent: action.payload
             }
+        }
+    },
+})
 
-        default:
-            return state
-    }
-}
+const { actions, reducer } = todosSlicer;
+
+export const { addTodo, deleteTodo, checkTodo, clearCompleted, editTitle, editTodo, checkAllTodos, changeFilter, getClick } = actions
+
+export default reducer

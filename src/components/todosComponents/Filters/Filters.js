@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import FiltersNav from "./FiltersNav";
-import {clearCompleted} from "../../../redux/todosReducer/actions";
+import {clearCompleted} from "../../../redux/todosReducer/todosSlicer";
 import style from './Filtres.module.css'
 import {makeGetItemsLeft, makeGetVisibleTodos} from "../../../redux/selectors/todosSelector";
 

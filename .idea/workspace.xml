@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="">
+    <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Push">
+      <change afterPath="$PROJECT_DIR$/src/redux/todosReducer/todosSlicer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/localStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/localStorage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +86,16 @@
       <workItem from="1621159747714" duration="20000" />
       <workItem from="1622479038681" duration="1310000" />
       <workItem from="1622481158507" duration="2650000" />
-      <workItem from="1622702240271" duration="21320000" />
+      <workItem from="1622702240271" duration="26351000" />
     </task>
+    <task id="LOCAL-00001" summary="Push">
+      <created>1622802153514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622802153514</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,5 +112,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push" />
   </component>
 </project>
