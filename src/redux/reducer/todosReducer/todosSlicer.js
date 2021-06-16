@@ -4,8 +4,6 @@ import {FILTER_ALL} from "./filtersConst";
 const defaultState = {
     todos: [],
     currentFilter: FILTER_ALL,
-    click: false,
-    clickEvent: null,
     editTodoTitle: ''
 }
 
@@ -97,19 +95,12 @@ export const todosSlicer = createSlice({
                 ...state,
                 currentFilter: action.payload
             }
-        },
-        getClick(state, action) {
-            return {
-                ...state,
-                click: true,
-                clickEvent: action.payload
-            }
         }
     },
 })
 
 const { actions, reducer } = todosSlicer;
 
-export const { addTodo, deleteTodo, checkTodo, clearCompleted, editTitle, editTodo, checkAllTodos, changeFilter, getClick } = actions
+export const { addTodo, deleteTodo, checkTodo, clearCompleted, editTitle, editTodo, checkAllTodos, changeFilter } = actions
 
 export default reducer

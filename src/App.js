@@ -1,15 +1,13 @@
 import React from "react";
 import {connect} from "react-redux";
-import PropTypes from "prop-types";
-import {getClick} from "./redux/reducer/todosReducer/todosSlicer";
 import Header from "./components/todosComponents/Header/Header";
 import Todos from "./components/todosComponents/Todos/Todos";
 import InputTodo from "./components/todosComponents/InputTodo/InputTodo";
 import Filters from "./components/todosComponents/Filters/Filters";
 import Footer from "./components/todosComponents/Footer/Footer";
 
-const App = ({getClickApp}) => (
-        <div className='body' onClick={(event) => getClickApp(event)}>
+const App = () => (
+        <div className='body' >
             <div className='wrapper'>
                 <Header/>
                 <InputTodo/>
@@ -20,12 +18,4 @@ const App = ({getClickApp}) => (
         </div>
     )
 
-App.propTypes = {
-    getClickApp: PropTypes.func
-}
-
-const mapDispatchToProps = {
-    getClickApp: event => getClick(event)
-}
-
-export default connect(null, mapDispatchToProps) (App)
+export default connect(null, null) (App)

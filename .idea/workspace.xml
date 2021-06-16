@@ -4,16 +4,12 @@
     <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/InputTodo/InputTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Todo/keysConst.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/keysConst.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/localStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/localStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducer/todosReducer/todosSlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/todosReducer/todosSlicer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/filtersConst.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/todosReducer/filtersConst.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosSlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/todosReducer/todosSlicer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +84,9 @@
       <workItem from="1621159747714" duration="20000" />
       <workItem from="1622479038681" duration="1310000" />
       <workItem from="1622481158507" duration="2650000" />
-      <workItem from="1622702240271" duration="27548000" />
+      <workItem from="1622702240271" duration="29652000" />
+      <workItem from="1623486615120" duration="1579000" />
+      <workItem from="1623854443023" duration="4396000" />
     </task>
     <task id="LOCAL-00001" summary="Push">
       <created>1622802153514</created>

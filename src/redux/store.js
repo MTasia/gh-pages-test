@@ -1,14 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
 import todosReducer from "./reducer/todosReducer/todosSlicer";
-// import {loadState} from "./localStorage";
+import {loadState, saveState} from "./localStorage";
 
-// const persistedState = loadState();
+const persistedState = loadState();
 export const store = configureStore({
     reducer: {
         todosReducer,
-        // persistedState
+        persistedState
     }
 })
 
-
-
+store.subscribe(() => {
+    saveState({
+        todosReducer: store.getState().todosReducer
+    });
+});

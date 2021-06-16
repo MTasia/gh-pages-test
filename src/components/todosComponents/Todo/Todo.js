@@ -4,9 +4,8 @@ import PropTypes from "prop-types";
 import {checkTodo, deleteTodo, editTitle, editTodo} from "../../../redux/reducer/todosReducer/todosSlicer";
 import {ENTER_KEY_CODE, ESC_KEY_CODE} from "./keysConst";
 import style from './Todo.module.css'
-import {makeGetClick, makeGetClickEvent} from "../../../redux/selectors/todosSelector";
 
-const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo, click, clickEvent}) => {
+const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo}) => {
 
     const [editTodoTitle, setEditTodoTitle] = useState(todo.title)
 
@@ -32,17 +31,17 @@ const Todo = ({todo, deleteTodoTodo, checkTodoTodo, editTitleTodo, editTodoTodo,
 
     const inputRef = useRef(null)
     useEffect(() => {
-        function handleClickOutside(event) {
-            if (click && inputRef.current && !inputRef.current.contains(event.target)) {
-                clickEvent.preventDefault();
-                editTitleTodo(editTodoTitle)
-                editTodoTodo(todo)
+        const handleClickOutside = event => {
+            if (!inputRef.current || inputRef.current.contains(event.target)) {
+                return;
             }
+            editTitleTodo(editTodoTitle)
+            editTodoTodo(todo)
         }
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
-        };
+        }
     })
 
     return (
@@ -83,15 +82,8 @@ Todo.propTypes = {
     deleteTodoTodo: PropTypes.func,
     checkTodoTodo: PropTypes.func,
     editTitleTodo: PropTypes.func,
-    editTodoTodo: PropTypes.func,
-    click: PropTypes.bool,
-    clickEvent: PropTypes.objectOf(PropTypes.any)
+    editTodoTodo: PropTypes.func
 }
-
-const mapStateToProps = (state) => ({
-        click: makeGetClick(state),
-        clickEvent: makeGetClickEvent(state)
-    })
 
 const mapDispatchToProps = {
     deleteTodoTodo: id => deleteTodo(id),
@@ -100,4 +92,4 @@ const mapDispatchToProps = {
     editTodoTodo: id => editTodo(id),
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Todo)
+export default connect(null, mapDispatchToProps) (Todo)
