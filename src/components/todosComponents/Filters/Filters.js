@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import FiltersNav from "./FiltersNav";
 import {clearCompleted} from "../../../redux/reducer/todosReducer/todosSlicer";
 import style from './Filtres.module.css'
-import {makeGetItemsLeft, makeGetVisibleTodos} from "../../../redux/selectors/todosSelector";
+import {makeGetItemsLeft, makeGetAllTodos} from "../../../redux/selectors/todosSelector";
 
 const Filters = ({todos, itemsLeft, clearCompletedFilters}) => (
         <div className={todos.length === 0 ? style.hidden : style.none}>
@@ -28,10 +28,10 @@ Filters.propTypes = {
 }
 
 const makeMapStateToProps = () => {
-    const getVisibleTodos = makeGetVisibleTodos()
     const getItemsLeft = makeGetItemsLeft()
+    const getAllTodos = makeGetAllTodos()
     const mapStateToProps = (state) => ({
-        todos: getVisibleTodos(state),
+        todos: getAllTodos(state),
         itemsLeft: getItemsLeft(state)
     })
     return mapStateToProps

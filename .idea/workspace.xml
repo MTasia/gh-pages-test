@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Push">
+    <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Edit local storage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/Filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1622481158507" duration="2650000" />
       <workItem from="1622702240271" duration="29652000" />
       <workItem from="1623486615120" duration="1579000" />
-      <workItem from="1623854443023" duration="13673000" />
+      <workItem from="1623854443023" duration="16223000" />
     </task>
     <task id="LOCAL-00001" summary="Push">
       <created>1622802153514</created>
@@ -108,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622802153514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Edit local storage">
+      <created>1624128836230</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624128836230</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push" />
+    <MESSAGE value="Edit local storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit local storage" />
   </component>
 </project>

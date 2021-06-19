@@ -63,3 +63,8 @@ export const makeGetFilterStatus = () => createSelector(
     }
 )
 
+export const makeGetAllTodos = () => createSelector(
+    [getTodos],
+    (todos) => (todos)
+)
+
