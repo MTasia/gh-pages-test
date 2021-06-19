@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Todo/keysConst.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Todo/keysConst.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/localStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/localStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer/todosReducer/todosSlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/todosReducer/todosSlicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +68,23 @@
       <recent name="D:\Documents\snp\todo-react-redux\src\redux\Reducers" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.predeploy" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +98,7 @@
       <workItem from="1622481158507" duration="2650000" />
       <workItem from="1622702240271" duration="29652000" />
       <workItem from="1623486615120" duration="1579000" />
-      <workItem from="1623854443023" duration="4396000" />
+      <workItem from="1623854443023" duration="7885000" />
     </task>
     <task id="LOCAL-00001" summary="Push">
       <created>1622802153514</created>

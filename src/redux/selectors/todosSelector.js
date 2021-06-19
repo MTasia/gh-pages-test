@@ -5,10 +5,6 @@ const getTodos = (state) => state.todosReducer.todos
 
 const getFilter = (state) => state.todosReducer.currentFilter
 
-export const makeGetClick = (state) => state.todosReducer.click
-
-export const makeGetClickEvent = (state) => state.todosReducer.clickEvent
-
 export const makeGetItemsLeft = () => createSelector(
     [getTodos],
     (todos) => {
