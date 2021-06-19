@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 import {connect} from "react-redux";
-import PropTypes from "prop-types";
+import PropTypes, {bool} from "prop-types";
 import {changeFilter} from "../../../redux/reducer/todosReducer/todosSlicer";
 import style from "./Filtres.module.css";
+import {makeGetFilterStatus} from "../../../redux/selectors/todosSelector";
 
-const FiltersNav = ({changeFilterNav}) => {
+const FiltersNav = ({filterStatus, changeFilterNav}) => {
 
-    const [allSelected, setAllSelected] = useState(true)
-    const [activeSelected, setActiveSelected] = useState(false)
-    const [completedSelected, setCompletedSelected] = useState(false)
+    const [allSelected, setAllSelected] = useState(filterStatus.all)
+    const [activeSelected, setActiveSelected] = useState(filterStatus.active)
+    const [completedSelected, setCompletedSelected] = useState(filterStatus.completed)
 
     const setAllHandler = () => {
         setAllSelected(true);
@@ -47,11 +48,20 @@ const FiltersNav = ({changeFilterNav}) => {
 }
 
 FiltersNav.propTypes = {
+    filterStatus: PropTypes.objectOf(bool),
     changeFilterNav: PropTypes.func
+}
+
+const makeMapStateToProps = () => {
+    const getFilterStatus = makeGetFilterStatus()
+    const mapStateToProps = (state) => ({
+        filterStatus: getFilterStatus(state)
+    })
+    return mapStateToProps
 }
 
 const mapDispatchToProps = {
     changeFilterNav: filter => changeFilter(filter)
 }
 
-export default connect(null, mapDispatchToProps) (FiltersNav)
+export default connect(makeMapStateToProps, mapDispatchToProps) (FiltersNav)

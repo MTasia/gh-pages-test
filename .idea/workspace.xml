@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b56073d4-9eed-4509-ac94-02831b805427" name="Default Changelist" comment="Push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todosComponents/Filters/FiltersNav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/todosSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
@@ -98,7 +99,7 @@
       <workItem from="1622481158507" duration="2650000" />
       <workItem from="1622702240271" duration="29652000" />
       <workItem from="1623486615120" duration="1579000" />
-      <workItem from="1623854443023" duration="7885000" />
+      <workItem from="1623854443023" duration="13673000" />
     </task>
     <task id="LOCAL-00001" summary="Push">
       <created>1622802153514</created>

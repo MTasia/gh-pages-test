@@ -33,3 +33,33 @@ export const makeGetVisibleTodos = () => createSelector(
             }
             return todos
         })
+
+export const makeGetFilterStatus = () => createSelector(
+    [getFilter],
+    (filter) => {
+        let filterStatus = {}
+        if (filter === FILTER_ALL) {
+            filterStatus = {
+                all: true,
+                active: false,
+                completed: false
+            }
+        }
+        if (filter === FILTER_ACTIVE) {
+            filterStatus = {
+                all: false,
+                active: true,
+                completed: false
+            }
+        }
+        if (filter === FILTER_COMPLETED) {
+            filterStatus = {
+                all: false,
+                active: false,
+                completed: true
+            }
+        }
+        return filterStatus
+    }
+)
+
